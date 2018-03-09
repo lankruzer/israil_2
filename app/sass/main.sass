@@ -1,0 +1,184 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	position: relative
+	min-width: 320px
+	min-height: 100vh
+	font-family: $default-font
+	font-size: 16px
+	line-height: 1.65
+	overflow-x: hidden
+	direction: rtl
+	background-image: url('../img/body-bg.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.header
+	margin-bottom: 20px
+	&__top
+		background-color: #000
+	&__link
+		font-size: 16px
+		color: #fff
+		text-decoration: none
+		transition: .25s
+		white-space: nowrap
+		&:hover
+			color: #ed9237
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		margin-left: 10px
+		width: 16px
+		height: auto
+	&__bottom
+		padding-bottom: 5px
+		background-color: #0a6082
+	&__logo-link
+		width: 200px
+		&-img
+			display: block
+			width: 100%
+			height: auto
+
+.main
+	margin-bottom: auto
+
+
+.h1
+	margin: 0 0 20px
+	font-size: 74px
+	font-weight: 700
+
+.products
+	padding: 
+		top: 60px
+		bottom: 80px
+	border-radius: 4px
+	background-color: rgb(238, 243, 246);
+	background-image: url('../img/pattern-gray.jpg')
+	background-repeat: repeat
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3)
+
+.product
+	margin-bottom: 80px
+	&__link-img
+		margin-bottom: 10px
+		height: 230px
+	&__title
+		margin: 0
+		.product__link
+			font-size: 24px
+			line-height: 24px
+			font-weight: 400
+			color: #000
+			transition: .25s
+			&:hover
+				color: #0a6082
+	&__link
+		font-size: 24px
+		line-height: 24px
+		color: #000
+		text-decoration: none
+		&:hover
+			text-decoration: none
+			color: #0a6082
+		.small
+			font-size: 18px
+			line-height: 24px
+	.btn
+		margin-top: 10px
+
+.btn
+	display: inline-block
+	vertical-align: middle
+	align-self: center
+	padding: 10px 28px 6px
+	box-sizing: border-box
+	font-size: 24px
+	line-height: 24px
+	font-weight: 700
+	color: #0475a1
+	background-color: #fff
+	box-shadow: 1px 1.732px 2px 0 rgba(0, 0, 0, 0.27)
+	transition: .25s
+	&:hover
+		color: #000
+		text-decoration: none
+		box-shadow: 1px 1.732px 2px 0 rgba(0, 0, 0, .4)
+		
+.absolute-img
+	position: absolute
+		
+.footer
+	position: relative
+	margin-top: -100px
+	&__absolute
+		width: 100%
+		overflow-x: auto
+		&-img
+			width: auto
+			max-width: none
+			min-width: 100%
+	&__bottom
+		padding-top: 20px
+		padding-bottom: 50px
+		background: #3e7c14 url('../img/pattern-green.jpg') repeat
+	&__block
+		padding: 0 30px
+		box-sizing: border-box
+		border:
+			left: 1px dashed #68a32e
+			right: 1px dashed #68a32e
+	&__title
+		margin-bottom: 12px
+		font-size: 24px
+		color: #fff
+
+.footer-soc
+	margin: 0
+	padding: 0
+	list-style: none
+	&__li
+		margin: 5px
+	&__link
+		svg 
+			display: block
+			max-width: 32px
+			height: auto
+			path
+				fill: #000
+				transition: .25s
+		&:hover svg path
+			fill: #fff
+
+
+@import "media" // Always at the end
